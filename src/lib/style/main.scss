@@ -1,0 +1,48 @@
+@import './reset.scss';
+
+$fonts: 'Roboto', 'Open Sans', 'Helvetica', sans-serif;
+
+:root {
+  font-family: $fonts;
+  --blackish: #121213;
+  --lightblackish: #18181a;
+  --lightlightblackish: #1d1d20;
+  --whitish: #f3f2f2;
+  --darkwhitish: #e6e6e6;
+  --darkdarkwhitish: #dddddd;
+  --gray: #595f66;
+  --lightgray: #6f7985;
+  --lightlightgray: #8999ac;
+  --darkgray: #3d454e;
+  --darkdarkgray: #222b35;
+
+  --red: tomato;
+  --yellow: gold;
+  --blue: cornflowerblue;
+  --pink: #fc0fc0;
+
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.33rem;
+  --size-600: 1.77rem;
+  --size-700: 2.36rem;
+  --size-800: 3.15rem;
+  --size-900: 4.2rem;
+
+  --font-large: clamp(var(--size-700), 3vw, var(--size-900));
+  --font-med: clamp(var(--size-500), 2vw, var(--size-600));
+  --font-small: clamp(var(--size-400), 1vw, var(--size-500));
+
+  --space: 4vw;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: var(--font-large);
+}
