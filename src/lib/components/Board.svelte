@@ -1,39 +1,47 @@
 <script>
+  import Cell from './Cell.svelte';
 
+  const maxCells = 9;
 </script>
 
 <div class="board" role="grid">
   <div class="row" role="row">
-      <button class="cell" role="gridcell">Cell</button>
-      <button class="cell" role="gridcell">Cell</button>
-      <button class="cell" role="gridcell">Cell</button>
+      <Cell />
+      <Cell />
+      <Cell />
   </div>
   <div class="row" role="row">
-      <button class="cell" role="gridcell">Cell</button>
-      <button class="cell" role="gridcell">Cell</button>
-      <button class="cell" role="gridcell">Cell</button>
+      <Cell />
+      <Cell />
+      <Cell />
   </div>
   <div class="row" role="row">
-      <button class="cell" role="gridcell">Cell</button>
-      <button class="cell" role="gridcell">Cell</button>
-      <button class="cell" role="gridcell">Cell</button>
+      <Cell />
+      <Cell />
+      <Cell />
   </div>
 </div>
 
 <style>
   .board {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    min-height: 100%;
-    border: 1px solid var(--blackish);
+    display: flex;
+    flex-direction: column;
+    border: 4px solid var(--darkgray);
+  }
+  .board > * {
+    border: none;
+  }
+  .board > * + * {
+    border-top: 4px solid var(--darkgray);
   }
   .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-self: stretch;
   }
-  .cell {
-    aspect-ratio: 1 / 1;
+  :global(.row > * ) {
     border: none;
+  }
+  .row > :global(* + *) {
+    border-left: 4px solid var(--darkgray);
   }
 </style>

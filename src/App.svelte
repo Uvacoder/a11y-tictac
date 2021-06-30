@@ -14,13 +14,14 @@
 <style>
   main {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(320px, 60vw, 680px);
+    margin-inline: auto;
   }
   .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: grid;
+    width: 100%;
+    margin-block: 2rem;
   }
 </style>

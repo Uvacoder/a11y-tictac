@@ -1,9 +1,9 @@
 @import './reset.scss';
 
-$fonts: 'Roboto', 'Open Sans', 'Helvetica', sans-serif;
 
 :root {
-  font-family: $fonts;
+  --fonts: 'Roboto', 'Open Sans', 'Helvetica', sans-serif;
+
   --blackish: #121213;
   --lightblackish: #18181a;
   --lightlightblackish: #1d1d20;
@@ -34,6 +34,12 @@ $fonts: 'Roboto', 'Open Sans', 'Helvetica', sans-serif;
   --font-small: clamp(var(--size-400), 1vw, var(--size-500));
 
   --space: 4vw;
+}
+
+body {
+  background-color: var(--blackish);
+  font-family: var(--fonts);
+  color: var(--whitish);
 }
 
 h1,
